@@ -12,11 +12,20 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+//Para usar el mask
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+
+//Componentes de la app - screens
+import { RegistroScreenComponent } from './screens/registro-screen/registro-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    RegistroScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +36,14 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    NgxMaskDirective
   ],
-  providers: [],
+  providers: [
+    provideNgxMask()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
