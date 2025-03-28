@@ -14,18 +14,26 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 //Para usar el mask
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 //Componentes de la app - screens
 import { RegistroScreenComponent } from './screens/registro-screen/registro-screen.component';
+import { LeftSidebarComponent } from './partials/left-sidebar/left-sidebar.component';
+import { HeaderAppComponent } from './partials/header-app/header-app.component';
+import { FooterAppComponent } from './partials/footer-app/footer-app.component';
+import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginScreenComponent,
-    RegistroScreenComponent
+    RegistroScreenComponent,
+    LeftSidebarComponent,
+    HeaderAppComponent,
+    FooterAppComponent,
+    HomeScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,8 @@ import { RegistroScreenComponent } from './screens/registro-screen/registro-scre
     ReactiveFormsModule,
     MatSelectModule,
     MatCheckboxModule,
-    NgxMaskDirective
+    NgxMaskDirective,
+    MatSidenavModule
   ],
   providers: [
     provideNgxMask()
