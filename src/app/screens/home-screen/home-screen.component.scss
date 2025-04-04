@@ -386,3 +386,19 @@
   stroke: #FFFFFF;
 }
 
+
+.codigos-registrados {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #7A7A7A1F; /* Fondo de la tabla */
+}
+
+/* Estilo de las celdas de la tabla */
+.codigos-registrados th, .codigos-registrados td {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #b8b8b8;
+  padding: 8px;
+  text-align: left;
+}
