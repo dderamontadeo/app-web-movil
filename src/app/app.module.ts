@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
@@ -26,6 +26,8 @@ import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
 import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
+import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad
     HomeScreenComponent,
     BasesPromocionScreenComponent,
     PoliticaPrivacidadScreenComponent,
+    InstruccionesScreenComponent,
+    NuevoLookScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,8 @@ import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad
     MatSelectModule,
     MatCheckboxModule,
     NgxMaskDirective,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [
     provideNgxMask()
